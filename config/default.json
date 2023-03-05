@@ -1,0 +1,21 @@
+{
+  "Database": {
+    "dbConfig": {
+      "uri": "mongodb://localhost:27017/zteros"
+    }
+  },
+  "Application": {
+    "port": 3003,
+    "version": "v1"
+  },
+  "Amazon": {
+    "cognitoPoolId": "",
+    "cognitoClientId": "",
+    "region": "",
+    "accessKeyId": "",
+    "secretAccessKey": ""
+  },
+  "zTeros": {
+    "baseUrl": ""
+  }
+}

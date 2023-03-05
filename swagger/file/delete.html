@@ -1,0 +1,23 @@
+<p>The process for deleting a public facing or private record is the same, however the steps the API takes are different as follows:</p>
+
+<u>Public</u><br/>
+<ol>
+  <li><p>Receive authentication token and ID of file to delete</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get file details from PostgresDB by ID</p></li>
+  <li><p>Delete data record from zTeros</p></li>
+  <li><p>Delete file details from PostgresDB</p></li>
+</ol>
+<br/>
+
+<u>Private</u><br/>
+<ol>
+  <li><p>Receive authentication token and ID of file to delete</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get file details including privilege ID from PostgresDB by ID</p></li>
+  <li><p>Get privilege details from PostgresDB</p></li>
+  <li><p>Check whether the current user is a user of the privilege</p></li>
+  <li><p>Delete private face of the data record from zTeros</p></li>
+  <li><p>Delete public face of the data record from zTeros</p></li>
+  <li><p>Delete file details from PostgresDB</p></li>
+</ol>

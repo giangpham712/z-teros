@@ -1,0 +1,10 @@
+<p>Allows an authenticated Owner user to delete a privilege that he (or she) is an associated owner of.</p>
+<ol>
+  <li><p>Receive authentication token, ID of the privilege to update and update details (name, list of associated users)</p></li>
+  <li><p>Validate authentication token with Cognito to get user email</p></li>
+  <li><p>Get details of authenticated user from PostgresDB by email</p></li>
+  <li><p>Check whether authenticated user is an owner of the privilege</p></li>
+  <li><p>Get details of the privilege to delete from PostgresDB by ID</p></li>
+  <li><p>Delete the requested privilege on zTeros</p></li>
+  <li><p>Delete the requested privilege from PostgresDB</p></li>
+</ol>

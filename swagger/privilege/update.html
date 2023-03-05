@@ -1,0 +1,15 @@
+<p>Allows an authenticated Owner user to update a privilege that he (or she) is an associated owner of.</p>
+<ol>
+  <li><p>Receive authentication token, ID of the privilege to update and update details (name, list of associated users)</p></li>
+  <li><p>Validate authentication token with Cognito to get user email</p></li>
+  <li><p>Get details of authenticated user from PostgresDB by email</p></li>
+  <li><p>Get details of the privilege to update from PostgresDB by ID</p></li>
+  <li><p>Get list of User users associated with requested privilege from zTeros</p></li>
+  <li><p>Get list of Owner users associated with requested privilege from zTeros</p></li>
+  <li><p>Check if authenticated user is an owner of the requested privilege</p></li>
+  <li><p>Create link (if not yet exists) to the requested privilege for User users that should be associated User user (if any)</p></li>
+  <li><p>Create link (if not yet exists) to the requested privilege for Owner users that should be associated Owner user (if any)</p></li>
+  <li><p>Delete link (if exists) to the requested privilege for users that should no longer be associated User user (if any)</p></li>
+  <li><p>Delete link (if exists) to the requested privilege for Owner users that should no longer be associated Owner user (if any)</p></li>
+  <li><p>Update details (name) of the requested privilege into PostgresDB</p></li>
+</ol>

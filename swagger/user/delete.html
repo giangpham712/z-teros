@@ -1,0 +1,12 @@
+<p>Allows an administrator user to delete a user.  Read more about administrator privileges in the zTeros documentation.</p>
+<ol>
+  <li><p>Receive authentication token and ID of user to delete</p></li>
+  <li><p>Validate authentication token with Cognito to get username (email)</p></li>
+  <li><p>Get details of authenticated user from PostgresDB by username</p></li>
+  <li><p>Check if authenticated user is an Admin user</p></li>
+  <li><p>Get details of user to delete from PostgresDB by ID</p></li>
+  <li><p>Delete Owner user from zTeros</p></li>
+  <li><p>Delete User user from zTeros</p></li>
+  <li><p>Delete user from Cognito</p></li>
+  <li><p>Delete user from PostgresDB</p></li>
+</ol>

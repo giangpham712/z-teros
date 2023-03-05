@@ -1,0 +1,12 @@
+<p>Allows an authenticated user to list all users (users and owners) associated with a privilege</p>
+
+<ol>
+  <li><p>Receive authentication token and ID of requested privilege</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get details of requested privilege (name, UID) from PostgresDB by ID</p></li>
+  <li><p>Get list of User users associated with requested privilege from zTeros</p></li>
+  <li><p>Get list of Owner users associated with requested privilege from zTeros</p></li>
+  <li><p>Retrieve details (first name, last name, role, email) for associated owners from PostgresDB by UID</p></li>
+  <li><p>Retrieve details (first name, last name, role, email) for associated users from PostgresDB by UID</p></li>
+  <li><p>Return associated users (users and owners) with details</p></li>
+</ol>

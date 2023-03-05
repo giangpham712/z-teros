@@ -1,0 +1,23 @@
+<p>Downloading either a public or private facing record is done in the same manner, requiring the relevant ID to be passed through to the API.  There is an additional step that the API undertakes to download a private facing record however:</p>
+
+<u>Public</u><br/>
+<ol>
+  <li><p>Receive authentication token and ID of file to download</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get file details from PostgresDB by ID</p></li>
+  <li><p>Get content of the public face of the data record from zTeros</p></li>
+  <li><p>Decode content from base64 string format to buffer</p></li>
+  <li><p>Return content of file</p></li>
+</ol>
+<br/>
+
+<u>Private</u><br/>
+<ol>
+  <li><p>Receive authentication token and ID of file to download</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get file details including privilege ID from PostgresDB by ID</p></li>
+  <li><p>Get privilege details from PostgresDB</p></li>
+  <li><p>Get content of the private face of the data record from zTeros</p></li>
+  <li><p>Decode content from base64 string format to buffer</p></li>
+  <li><p>Return content of file</p></li>
+</ol>

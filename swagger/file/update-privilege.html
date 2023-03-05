@@ -1,0 +1,13 @@
+<p>Enabling an associated owner to update the access privileges for a file:</p>
+<ol>
+  <li><p>Receive authentication token and ID of file to view and ID of privilege to set</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get file details including privilege ID from PostgresDB by ID</p></li>
+  <li><p>Get lists of associated users and owners of the new privilege from zTeros</p></li>
+  <li><p>Check whether the current user is a user of the new privilege to set</p></li>
+  <li><p>Assign the new privilege to the file</p></li>
+  <li><p>Get content of the public face of the data record from zTeros</p></li>
+  <li><p>Create private face for the data record using the new privilege on Zteros</p></li>
+  <li><p>Update content of the private face of the data record on zTeros</p></li>
+  <li><p> Update content of the public face of the data record to empty on zTeros  </p></li>
+</ol>

@@ -1,0 +1,9 @@
+<p>Allows an authenticated Owner user to delete folder.
+<ol>
+  <li><p>Receive authentication token and ID of folder to delete</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Get folder data from PostgresDB by ID to check existence</p></li>
+  <li><p>Check whether folder has children (sub-folders and files)</p></li>
+  <li><p> Delete folder data from PostgresDB</p></li>
+  <li><p> Return error message if folder has children</p></li>
+</ol>

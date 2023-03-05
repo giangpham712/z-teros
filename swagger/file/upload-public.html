@@ -1,0 +1,12 @@
+<p>Allows an authenticated Owner user to create a new public record containing the contents of a file.</p>
+<ol>
+  <li><p>Receive authentication token and file data (content, name, parent path, access (private or public))</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Check in PostgresDB if parent path exists</p></li>
+  <li><p>Check in PostgresDB if file path already exists </p></li>
+  <li><p>Encode file content to base64 string format</p></li>
+  <li><p>Create new data record on zTeros</p></li>
+  <li><p>Update content of public face of the data record on zTeros</p></li>
+  <li><p>Persist details of new file into PostgresDB</p></li>
+  <li><p>Return details of uploaded file</p></li>
+</ol>

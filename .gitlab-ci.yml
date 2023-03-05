@@ -1,0 +1,20 @@
+image: docker:latest
+
+variables:
+    DOCKER_DRIVER: overlay
+    
+stages:
+    - deploy
+
+step-deploy:
+    stage: deploy
+    only:
+        - develop
+    script:
+        - sudo docker-compose up -d --build --force-recreate
+        - sudo chown -R gitlab-runner:gitlab-runner .
+        - ls
+        - sudo chown -R gitlab-runner:gitlab-runner ./dist
+    environment: production
+    when: always
+    

@@ -1,0 +1,9 @@
+<p>Allows an authenticated user to create a new privilege</p>
+<ol>
+  <li><p>Receive authentication token and new privilege details (name)</p></li>
+  <li><p>Validate authentication token with Cognito to get user email</p></li>
+  <li><p>Get details of authenticated user from PostgresDB by email</p></li>
+  <li><p>Create new privilege on zTeros </p></li>
+  <li><p>Persist privilege details (name, UID) into PostgresDB</p></li>
+  <li><p>Return details of created privilege</p></li>
+</ol>

@@ -1,0 +1,9 @@
+<p>Allows an authenticated Owner user to create a new folder</p>
+<ol>
+  <li><p>Receive authentication token and new folder details (name, parent path)</p></li>
+  <li><p>Validate authentication token with Cognito</p></li>
+  <li><p>Check in PostgresDB if parent path exists</p></li>
+  <li><p>Check in PostgresDB if folder path already exists </p></li>
+  <li><p>Persist details of new folder into PostgresDB</p></li>
+  <li><p>Return details of created folder</p></li>
+</ol>

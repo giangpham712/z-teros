@@ -1,0 +1,30 @@
+<p>This is a demonstration interface for the zTeros Encryption Service Interface.</p>
+<p>It has been created to provide a demonstration of how the zTeros middleware can be used as part of a back-end API to support a file encryption user interface, and is intended to be used as a reference resource for how you could build zTeros into your project.</p>
+<br/>
+
+<h3>Technology Overview</h3>
+<img src="/img/overview.png" style="width: 600px"/>
+<ul>
+    <li><p>The NestJS (A Typescript NodeJS framework) API handles all traffic</p></li>
+    <li>
+        <p>
+            The Amazon Cognito User Authentication Service provides user authentication - visit <a href="https://aws.amazon.com/cognito/">https://aws.amazon.com/cognito/</a> for more.<br/>
+            Note: With adaption, Microsoft Azure Active Directory, LDAP, Identity Server, Google OpenID or similar could be used as a replacement.
+        </p>
+    </li>
+    <li><p>The PostgresDB is the master store of record data from zTeros and the associated AWS Cognito references.</p></li>
+    <li><p>The zTeros Interface – hosted by GBR14 Ltd.  The interface interacts with the NestJS API through a whitelisted IP address.  Please contact GBR14 Ltd for the latest technical documentation.</p></li>
+</ul>
+<br/>
+
+<h3>Try It Out</h3>
+<p>Fork this repository to build your own test demonstrator.  You will require a separate PostgresSQL DB and Amazon Cognito Instance.  You will also need to contact GBR14 Ltd to request access to a demonstration instance of zTeros.</p>
+<br/>
+
+<h3>Disclaimer</h3>
+<p>THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE</p>
+<br/>
+
+<h3>Functional Overview</h3>
+<p>This repository demonstrates how an application might provide functionality to support a file manager user interface (similar to Dropbox or Google Drive).  The below API calls have been referenced to provide an overview of how the NestJS API integrates with the user auth and zTeros systems to provide such a service.</p>
+<br/>

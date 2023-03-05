@@ -1,0 +1,6 @@
+version: "3.7"
+
+services:
+  api:
+    ports:
+      - "80:3000"

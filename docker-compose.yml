@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+    networks:
+      - nodeapp-network
+    volumes:
+      - .:/api
+      - /api/node_modules
+    depends_on:
+      - mongo
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    networks:
+      - nodeapp-network
+    volumes:
+      - ./data:/data/db
+
+networks:
+  nodeapp-network:
+    driver: bridge
